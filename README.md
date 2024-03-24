@@ -1,4 +1,4 @@
-![Buid Status](https://github.com/denis1afds/homework1.1/actions/workflows/checks.yml/badge.svg?branch=master)
+![Buid Status](https://github.com/denis1afds/homework_3/actions/workflows/checks.yml/badge.svg?branch=master)
 
 
 # Scoring API service
