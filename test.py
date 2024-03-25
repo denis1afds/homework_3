@@ -122,6 +122,7 @@ class TestSuite(unittest.TestCase):
         response, code = self.get_response(request)
         self.assertEqual(api.INVALID_REQUEST, code, arguments)
         self.assertTrue(len(response))
+        self.assertEqual(api.OK, code, arguments)
 
     @cases([
         {"client_ids": [1, 2, 3], "date": datetime.datetime.today().strftime("%d.%m.%Y")},
@@ -130,7 +131,7 @@ class TestSuite(unittest.TestCase):
     ])
     def test_ok_interests_request(self, arguments):
         basestring = str
-        request = {"account": "horns&hoofs__", "login": "h&f", "method": "clients_interests", "arguments": arguments}
+        request = {"account": "horns&hoofs", "login": "h&f", "method": "clients_interests", "arguments": arguments}
         self.set_valid_auth(request)
         response, code = self.get_response(request)
         self.assertEqual(api.OK, code, arguments)
